@@ -14,6 +14,7 @@ Python packages:
 
 Git clone this repository using:
 > git clone https://github.com/Suraj-Bhor/Hasura-Tasks.git 
+
 > cd Hasura-Tasks
 
 Then go to the directory for which you want to run the application and type the following in the terminal.
