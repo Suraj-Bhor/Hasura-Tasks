@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  {% if title %}
+  <title>{{ title }} - Author</title>
+  {% else %}
+  <title>Welcome to Author page</title>
+  {% endif %}
+</head>
+
+<body>
+  <div>
+    <h2 align="center">Task 2:a</h2>
+  </div>
+  <br>
+  <br>
+  <table border=1 align="center">
+    <tr>
+      <td>
+        <b>Name of author</b>
+      </td>
+    
+      <td>
+        <b>
+          Number of posts
+        </b>
+      </td>
+    </tr>
+    
+    {% for auth in dataAuth %}
+    {% set count = [] %}
+      {% for posts in dataPosts %}
+        {% if (auth.id == posts.userId) %} 
+          {% if count.append(1)%}{% endif %}
+        {% endif %}
+       
+      {% endfor %}
+
+    <tr>
+      <td>
+        <div>
+          <p>{{ auth.name }}</b>
+          </p>
+        </div>
+      </td>
+      <td>
+        <div>
+          <p>
+            {{ count|length }}
+          </p>
+          </p>
+        </div>
+      </td>
+    </tr>
+
+
+    {% endfor %}
+  </table>
+</body>
+
+</html>
